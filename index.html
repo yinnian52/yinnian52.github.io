@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>9
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">亲爱的茵茵姐:</span><br />
+				<span class="space"/><span class="comments">我们于1月19日相识,刚开始接触的时候大家都很随缘</span><br />
+				<span class="space"/><span class="comments">我们经过不断的聊天,不断的了解对方</span><br />
+				<span class="space"/><span class="comments">慢慢的对对方有一个初步的认识</span><br />
+				<span class="space"/><span class="comments">不知何时开始,慢慢的喜欢了你</span><br />
+				<span class="space"/><span class="comments">本想于24年的情人节跟你表明心意</span><br />
+				<span class="space"/><span class="comments">但那会我觉得还为时过早，我们很多方面都没有接触</span><br />
+				<span class="space"/><span class="comments">外加觉得微信的表白很小儿科,所以我打算再继续了解</span><br />
+				<span class="space"/><span class="comments">直到2月18号,忍不住跟你表明了心意,也知道了你的心意开始<br />
+				<span class="space"/><span class="comments">我觉得我们一定会走到最后</span><br />
+				<span class="space"/><span class="comments">并且我觉得你是我值得去喜欢、去爱的一个女孩子<br />
+				<span class="space"/><span class="comments">我愿意爱你到老去、愿意为我们的未来撑起一片天空</span><br />
+				<span class="space"/><span class="comments">愿意为你去做每一件能让你开心快乐的事</span><br />
+				<span class="space"/><span class="comments">我期待与你慢慢变老,</span><br />
+				<span class="space"/><span class="comments">等我们老到哪儿也去不了</span><br />
+				<span class="space"/><span class="comments">还能满载着一生的幸福快乐</span><br />
+				<span class="space"/><span class="comments">我期待这一生与你一起走过</span><br />
+				<span class="space"/><span class="comments">走到尽头再回头看一生铅华满地</span><br />
+				<span class="space"/><span class="comments">茵茵姐,我喜欢你,我们谈恋爱吧！</span><br />
+
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						茵茵姐和哑铃哥，我们相识了
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">-昭年2024</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2024, 0, 19);
+		together.setHours(21);
+		together.setMinutes(0);
+		together.setSeconds(1);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
